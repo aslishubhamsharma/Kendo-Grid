@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="https://demos.telerik.com/kendo-ui/grid/index">
+  <style>
+
+  </style>
+  <title></title>
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.common-material.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.material.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.material.mobile.min.css" />
+
+  <script src="https://kendo.cdn.telerik.com/2019.2.619/js/jquery.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
+  <style>
+    .number1 {
+      display: inline-block;
+      text-align: center;
+
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header style="text-align:center; background-color:blue; height: 50px;">
+    <h2
+      style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-decoration: solid;  height:100%; display:flex; justify-content:center; align-items: center;">
+      Data About The Employees<h2>
+  </header>
+
+  <div class="grid"></div>
+
+  <script>
+    $(document).ready(function () {
+      $('.grid').kendoGrid({
+
+        columns: [{
+
+          field: "FirstName",
+          title: "FirstName"
+        },
+        {
+
+          field: "MiddleName",
+          title: "MiddleName"
+        },
+        {
+          field: "LastName",
+          title: "LastName"
+        },
+
+        {
+
+          field: "CompanyName",
+          title: "CompanyName"
+        },
+        {
+          template: "<div class = 'number1'>#: Contact #</div>",
+          field: "Contact",
+          title: "Contact",
+        }],
+
+        dataSource: {
+
+          data: [
+            {
+
+              FirstName: "Shubham",
+              LastName: "Sharma",
+              MiddleName: "-",
+              CompanyName: "WebContentor",
+              Contact: "Dwarka sector-7 Near Ramphal Chowk"
+            },
+
+            {
+              FirstName: "Sagar",
+              LastName: "jain",
+              MiddleName: "-",
+              CompanyName: "WebContentor",
+              Contact: "Dwarka sector-7 Near Ramphal Chowk"
+            },
+
+            {
+              FirstName: "Akhilesh",
+              LastName: "Kumar",
+              MiddleName: "-",
+              CompanyName: "WebContentor",
+              Contact: "Dwarka sector-7 Near Ramphal Chowk"
+
+            },
+            {
+              FirstName: "Durgesh",
+              LastName: "Gupta",
+              MiddleName: "-",
+              CompanyName: "WebContentor",
+              Contact: "Dwarka sector-7 Near Ramphal Chowk"
+            },
+
+            {
+              FirstName: "Sameer",
+              LastName: "Veda",
+              MiddleName: "-",
+              CompanyName: "WebContentor",
+              Contact: "Dwarka sector-7 Near Ramphal Chowk"
+            }
+
+          ]
+        }
+
+
+
+      });
+    });
+  </script>
+
+</body>
+
+</html>
